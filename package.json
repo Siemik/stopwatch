@@ -1,5 +1,5 @@
 {
-  "name": "pokemon-game",
+  "name": "stopwatch",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -16,7 +16,7 @@
     "build:autoprefixer": "autoprefixer-cli css/style.css",
     "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
     "watch": "npm-run-all build -p watch:*",
-    "watch:sassprefixer": "onchange -d 100 sass/style.sass -- node-sass --output-style expanded --source-map true -o css sass && autoprefixer-cli -o css/style.prefixed.css css/style.css",
+    "watch:sassprefixer": "onchange -d 100 sass/style.scss -- node-sass --output-style expanded --source-map true -o css sass && autoprefixer-cli -o css/style.prefixed.css css/style.css",
     "watch:browsersync": "node_modules/.bin/browser-sync start --server --files *.css *.html",
     "watch:babel": "babel js/script.js --watch --out-file js/script-compiled.js"
   },
