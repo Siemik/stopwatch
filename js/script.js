@@ -1,11 +1,10 @@
 let timeTable = [];
 
 class Stopwatch extends React.Component {
-  constructor(display) {
-   super(display);
+  constructor() {  
+   super(); 
     this.state = {
       running: false,
-      display: display,
       times: {
         minutes: 0,
         seconds: 0,
@@ -72,21 +71,7 @@ class Stopwatch extends React.Component {
     clearInterval(this.watch);
   }
 
-  get() {
-    console.log(this.format(this.times));
-    timeTable = [...timeTable, this.format(this.times)];
-    console.log(timeTable);
-  }
 
-  results() {
-    let pos = timeTable.length - 1;
-    this.val = timeTable;
-    let addTime = timeTable[pos]
-    const res = document.getElementById('list');
-    const list = document.createElement("li");
-    list.innerText = addTime;
-    res.appendChild(list);
-  }
 
   pad0(value) {
   let result = value.toString();
